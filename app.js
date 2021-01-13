@@ -1,21 +1,19 @@
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
+const express = require("express");
+const bodyParser = require("body-parser");
+const app = express();
 var logger = require("morgan");
+require("dotenv").config();
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
-
-var app = express();
+var indexRouter = require("./routes");
 
 app.use(logger("dev"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => res.send("App is working"));
 
 app.use("/api", indexRouter);
+
+app.listen(3000, () => console.log("App listening on port 3000!"));
 
 module.exports = app;
