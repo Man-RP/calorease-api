@@ -1,0 +1,64 @@
+
+
+
+most of the endpoints is sent with QP - userId
+
+home:
+-calories of today
+-last meal's food-collection
+
+calendar:
+-calories of each day's month
+-number-of-meals of each day's month
+{
+    '2020-01-01': {
+        number_of_meals: 3,
+        calories: 1500
+    }
+    '2020-01-02': {
+        number_of_meals: 3,
+        calories: 1500
+    },
+    '2020-01-03': {
+        number_of_meals: 3,
+        calories: 1500
+    },
+    '2020-01-04': {
+        number_of_meals: 3,
+        calories: 1500
+    },
+}
+GET :/api/daydetails?from=2020-01-01&to=2020-01-31
+
+day:
+-day's meals-collection
+{
+    320: {
+        title: 'ארוחת בוקר',
+        calories: 500
+    },
+    321: {
+        title: 'ארוחת ערב',
+        calories: 1000
+    },
+    322: {
+        title: 'ארוחת לילה',
+        calories: 500
+    }
+}
+GET :/api/meals?date=2020-01-01
+
+-food-collection of each day's meal
+{
+    1232: {
+        
+    }
+}
+GET :/api/food?date=2020-01-01&
+
+
+add meal modal:
+-user's meal-types-collection
+
+add item modal:
+-food-types-collection

@@ -1,20 +1,31 @@
-var express = require('express');
+var express = require("express");
 
 var router = express.Router();
 
-const { food } = require('../controllers')
-const { meal } = require('../controllers')
-
+const { foods } = require("../controllers");
+const { foodTypes } = require("../controllers");
+const { meals } = require("../controllers");
+const { dayDetails } = require("../controllers");
 
 //routes:
 
-//meal
-router.post('/meal', meal.addMeal);
+// router.post("/users", users.createUser);
+// router.put("/users/:id", users.updateUser);
+// router.delete("/users/:id", users.deleteUser);
 
+// router.post("/meals", meals.addMeal); //add new meal endpoint - add meal modal
+// router.get("/meals", meals.getMeals); //get meals collection endpoint - add meal modal
+// router.get("/meals/today", meals.getTodaysMeals); //get meals collection endpoint - today screen
 
-//food
-router.post('/food', food.addFoodToMeal);
+// router.post("/foods", foods.addFoodToMeal); //new record of food consumed - add food modal - add food modal
+// router.get("/foods/today", foods.getTodaysFood); //get today's food consumed collection - today screen
+// router.get("/foods", foods.getFood); //get food consumed collection - query params - day screen
+// router.delete("/foods/:id", foods.deleteFood); //delete food consumed  - day screen
 
+// router.post("/food-types", foodTypes.addFoodtype); //add food type related to user - add food modal
+// router.get("/food-types", foodTypes.getFoodtypes); //get food types related to user - query params - add food modal
 
+// router.get("/day-details/today", dayDetails.getTodayDetails); //get today's number-of-meals&calories endpoint - home
+// router.get("/day-details", dayDetails.getDayDetails); //get collection of number-of-meals&calories endpoint - query params - calendar
 
 module.exports = router;
