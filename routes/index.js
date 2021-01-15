@@ -1,13 +1,16 @@
 var express = require("express");
-
 var router = express.Router();
 
-const { foods } = require("../controllers");
-const { foodTypes } = require("../controllers");
-const { meals } = require("../controllers");
-const { dayDetails } = require("../controllers");
+// const { foods } = require("../controllers");
+// const { foodTypes } = require("../controllers");
+// const { meals } = require("../controllers");
+// const { dayDetails } = require("../controllers");
 
 //routes:
+
+// router.post("/auth/resgister", authentication.register);
+// router.post("/auth/login", authentication.login);
+// router.post("/auth/logout", authentication.register);
 
 // router.post("/users", users.createUser);
 // router.put("/users/:id", users.updateUser);
